@@ -85,6 +85,20 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
 
+async function handleRequest() {
+            // Обрабатываем запрос, например, вызываем функцию
+            console.log("JavaScript функция вызвана!");
+
+            // Здесь можно добавить любую логику
+        }
+
+        // Этот код выполнится при загрузке страницы
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('trigger')) {
+                handleRequest();
+            }
+        };
 
 let usercard = document.getElementById("usercard");
 
